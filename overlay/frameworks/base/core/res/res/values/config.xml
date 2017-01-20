@@ -499,4 +499,7 @@
          without impacting power, performance, and app compatibility (e.g. protected content). -->
     <bool name="config_nightDisplayAvailable">false</bool>
 
+    <!-- FP trustled limits the number to 4. -->
+    <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
+
 </resources>
