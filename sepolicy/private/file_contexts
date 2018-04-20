@@ -1,3 +1,7 @@
+# Bluetooth
+/sys/devices/platform/bluetooth/rfkill/rfkill0/state    u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/platform/bluetooth/rfkill/rfkill0/type    u:object_r:sysfs_bluetooth_writable:s0
+
 # Lights HAL
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/vendor\.samsung\.hardware\.light@3\.0-service	u:object_r:hal_light_default_exec:s0
 
