@@ -17,3 +17,6 @@ debug.cpurend.vsync=false
  #ADB props
 ro.secure=1 
 ro.debuggable=0
+
+# Hack for Youtube
+sys.display-size=3840x2160
