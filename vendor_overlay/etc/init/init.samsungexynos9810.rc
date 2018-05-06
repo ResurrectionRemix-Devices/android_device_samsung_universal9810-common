@@ -702,11 +702,6 @@ on boot
     chmod 664 /dev/cpuset/system-background/cpus
     chmod 664 /dev/cpuset/restricted/cpus
     chmod 664 /dev/cpuset/cpus
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-2,4-7
-    write /dev/cpuset/background/cpus 0-1
-    write /dev/cpuset/system-background/cpus 0-2
-    write /dev/cpuset/restricted/cpus 0-2
 
 # GPU
     chown system system /sys/kernel/gpu/gpu_freq_table
@@ -994,6 +989,12 @@ service lpm /system/bin/lpm
     critical
 
 on property:sys.boot_completed=1
+
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-2,4-7
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0-2
+    write /dev/cpuset/restricted/cpus 0-2
 
     write /sys/block/sda/queue/iostats 1
     write /sys/block/sda/queue/read_ahead_kb 256
