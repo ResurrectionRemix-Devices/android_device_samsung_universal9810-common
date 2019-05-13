@@ -45,7 +45,4 @@
     <!-- Doze: should the significant motion sensor be used as a pulse signal? -->
     <bool name="doze_pulse_on_significant_motion">false</bool>
 
-    <!-- Show battery icon in the QS Panel instead of in the header -->
-    <bool name="config_batteryInQSPanel">false</bool>
-
 </resources>
