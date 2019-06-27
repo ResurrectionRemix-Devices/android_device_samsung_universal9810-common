@@ -10,3 +10,6 @@ ro.vendor.cscsupported=1
 # Cmc properties
 ro.cmc.device_type=pd
 ro.cmc.version=2.0
+
+#Display
+debug.cpurend.vsync=false
