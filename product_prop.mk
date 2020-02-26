@@ -16,6 +16,10 @@
 
 # Device specific property overrides
 
+# fastbootd
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.fastbootd.available=true
+
 # Surfaceflinger
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.sf.latch_unsignaled=1
