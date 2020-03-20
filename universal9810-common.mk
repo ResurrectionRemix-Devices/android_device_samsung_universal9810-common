@@ -88,6 +88,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.9810
 
+# SamsungDoze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
 # S-Pen
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/samsung-sec_e-pen.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/sec_e-pen.idc
