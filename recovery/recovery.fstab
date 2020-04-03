@@ -1,0 +1,14 @@
+# <src>                                             <mnt_point>	   <type>    <mnt_flags and options>    <fs_mgr_flags>
+/dev/block/platform/11120000.ufs/by-name/SYSTEM      /system        ext4            default              recoveryonly
+/dev/block/platform/11120000.ufs/by-name/CACHE       /cache         ext4            default              recoveryonly
+/dev/block/platform/11120000.ufs/by-name/EFS         /efs           ext4            default              recoveryonly
+/dev/block/platform/11120000.ufs/by-name/BOOT        /boot          emmc            default              recoveryonly
+/dev/block/platform/11120000.ufs/by-name/RECOVERY    /recovery      emmc            default              recoveryonly
+/dev/block/platform/11120000.ufs/by-name/HIDDEN      /preload       ext4            default              recoveryonly
+/dev/block/platform/11120000.ufs/by-name/RADIO       /modem         emmc            default              recoveryonly
+/dev/block/platform/11120000.ufs/by-name/CPEFS       /cpefs         ext4            default              recoveryonly
+/dev/block/platform/11120000.ufs/by-name/MISC        /misc          emmc            default              recoveryonly
+/dev/block/platform/11120000.ufs/by-name/ODM         /odm           ext4            default              recoveryonly
+/dev/block/platform/11120000.ufs/by-name/VENDOR      /vendor        ext4            default              recoveryonly
+/dev/block/platform/11120000.ufs/by-name/USERDATA    /data          ext4            default              wait,check,encryptable=footer,length=-20480
+/devices/platform/11500000.dwmmc2/mmc_host*          auto           vfat            default              recoveryonly
