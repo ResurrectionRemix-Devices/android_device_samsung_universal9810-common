@@ -62,6 +62,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.samsungexynos9810.rc
+
 # Init
 PRODUCT_PACKAGES += \
     init.samsung.rc \
