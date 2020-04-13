@@ -120,6 +120,9 @@ PRODUCT_PACKAGES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
+# vendor_overlay
+-include $(LOCAL_PATH)/vendor_overlay.mk
+
 # Property overrides
 -include $(LOCAL_PATH)/product_prop.mk
 
