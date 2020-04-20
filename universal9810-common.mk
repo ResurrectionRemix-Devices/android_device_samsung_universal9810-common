@@ -75,10 +75,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsuspend
 
-# HotwordEnrollement app permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml
-
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
@@ -90,9 +86,6 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.9810
@@ -100,10 +93,6 @@ PRODUCT_PACKAGES += \
 # SamsungDoze
 PRODUCT_PACKAGES += \
     SamsungDoze
-
-# S-Pen
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/samsung-sec_e-pen.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/sec_e-pen.idc
 
 # Keylayout
 PRODUCT_COPY_FILES += \
