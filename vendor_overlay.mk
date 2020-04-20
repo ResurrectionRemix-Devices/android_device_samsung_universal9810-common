@@ -17,3 +17,7 @@
 # fstab.samsungexynos9810
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vendor_overlay/etc/fstab.samsungexynos9810:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/fstab.samsungexynos9810
+
+# liboemcrypto.so
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/vendor_overlay/lib/liboemcrypto.so:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/lib/liboemcrypto.so
