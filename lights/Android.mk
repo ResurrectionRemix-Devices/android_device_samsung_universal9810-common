@@ -29,6 +29,8 @@ LOCAL_SRC_FILES := \
     service.cpp \
     Light.cpp
 
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
+
 LOCAL_REQUIRED_MODULES := \
     android.hardware.light@2.0-service.9810.rc
 
