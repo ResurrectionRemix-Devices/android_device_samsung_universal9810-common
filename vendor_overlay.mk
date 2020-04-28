@@ -30,6 +30,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vendor_overlay/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/audio_policy_configuration.xml
 
+# media_profiles_V1_0.xml
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/vendor_overlay/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/media_profiles_V1_0.xml
+
 # liboemcrypto.so
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vendor_overlay/lib/liboemcrypto.so:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/lib/liboemcrypto.so
