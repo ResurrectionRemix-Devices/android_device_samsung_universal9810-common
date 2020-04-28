@@ -18,6 +18,10 @@
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vendor_overlay/etc/fstab.samsungexynos9810:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/fstab.samsungexynos9810
 
+# init.samsungexynos9810.usb.rc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/vendor_overlay/etc/init/init.samsungexynos9810.usb.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/init.samsungexynos9810.usb.rc
+
 # audio_policy_configuration.xml
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vendor_overlay/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/audio_policy_configuration.xml
