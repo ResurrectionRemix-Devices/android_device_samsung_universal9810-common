@@ -18,6 +18,10 @@
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vendor_overlay/etc/fstab.samsungexynos9810:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/fstab.samsungexynos9810
 
+# init.samsungexynos9810.rc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/vendor_overlay/etc/init/init.samsungexynos9810.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/init.samsungexynos9810.rc
+
 # init.samsungexynos9810.usb.rc
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vendor_overlay/etc/init/init.samsungexynos9810.usb.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/init.samsungexynos9810.usb.rc
