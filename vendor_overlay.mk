@@ -14,26 +14,30 @@
 # limitations under the License.
 #
 
-# fstab.samsungexynos9810
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vendor_overlay/etc/fstab.samsungexynos9810:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/fstab.samsungexynos9810
+# fstab
+PRODUCT_PACKAGES += \
+    fstab.samsungexynos9810
 
-# init.samsungexynos9810.rc
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vendor_overlay/etc/init/init.samsungexynos9810.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/init.samsungexynos9810.rc
+# init
+PRODUCT_PACKAGES += \
+    init.samsungexynos9810.rc \
+    init.samsungexynos9810.usb.rc
 
-# init.samsungexynos9810.usb.rc
+# etc
+PRODUCT_PACKAGES += \
+    audio_policy_configuration.xml \
+    media_profiles_V1_0.xml
+    
+# null
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vendor_overlay/etc/init/init.samsungexynos9810.usb.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/init.samsungexynos9810.usb.rc
+    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/icd_over_five_vendor.rc \
+    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/pa_daemon_kinibi.rc \
+    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/secure_storage_daemon_kinibi.rc \
+    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.tlc.atn@1.0-service.rc \
+    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.tlc.iccc@1.0-service.rc \
+    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.tlc.tima@1.0-service.rc \
+    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.tlc.ucm@1.0-service.rc \
+    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service.rc \
+    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vk_kinibi.rc \
+    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/lib/liboemcrypto.so
 
-# audio_policy_configuration.xml
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vendor_overlay/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/audio_policy_configuration.xml
-
-# media_profiles_V1_0.xml
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vendor_overlay/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/media_profiles_V1_0.xml
-
-# liboemcrypto.so
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vendor_overlay/lib/liboemcrypto.so:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/lib/liboemcrypto.so

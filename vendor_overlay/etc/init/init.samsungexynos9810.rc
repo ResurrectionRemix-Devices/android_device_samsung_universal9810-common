@@ -7,6 +7,9 @@ on early-init
 on init
     start watchdogd
 
+    # Disable vendor overlay
+    mount none /vendor/lost+found /vendor/overlay bind
+
     # See storage config details at http://source.android.com/tech/storage/
     mkdir /mnt/shell/emulated 0700 shell shell
     mkdir /storage/emulated 0555 root root
@@ -15,8 +18,6 @@ on init
     symlink /sdcard /mnt/sdcard
 
     export EXTERNAL_STORAGE /sdcard
-
-    #export SECONDARY_STORAGE /storage/extSdCard
 
     symlink /data/app /factory
     #Reactivation Lock
@@ -820,6 +821,7 @@ on fs
 	chown system media_rw /sys/class/lcd/panel/fingerprint
 
 # Permissions for MDNIE
+	chown system system /sys/class/mdnie/mdnie/lux
 	chown system media_rw /sys/class/mdnie/mdnie/bypass
 	chown system media_rw /sys/class/mdnie/mdnie/mode
 	chown system media_rw /sys/class/mdnie/mdnie/scenario
@@ -909,6 +911,13 @@ on property:ro.bootmode=charger
     mkdir /efs/lpm 0775 system system
     class_start sec-charger
 
+# LPM
+service lpm /system/bin/lpm
+    class sec-charger
+    user root
+    group system radio input
+    critical
+
 on property:sys.boot_completed=1
 
     write /sys/block/sda/queue/iostats 1
@@ -923,3 +932,6 @@ service swapon /sbin/sswap -s -f 2048
     seclabel u:r:sswap:s0
     oneshot
 
+service sec_wsm_service /system/bin/true
+    oneshot
+    disabled
