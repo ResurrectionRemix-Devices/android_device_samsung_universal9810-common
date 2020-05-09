@@ -36,10 +36,6 @@ on init
     chown system radio /sys/class/fingerprint/fingerprint/adm
     chown system radio /sys/class/fingerprint/fingerprint/bfs_values
 
-# sem_daemon permission
-    chown system system /efs/sec_efs/ssp_data
-    chmod 0644 /efs/sec_efs/ssp_data
-
 # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
     chown system radio /sys/class/sensors/accelerometer_sensor/calibration
@@ -163,7 +159,7 @@ on init
     chown system radio /sys/class/sensors/ssp_sensor/thermistor_channel_0
     chown system radio /sys/class/sensors/ssp_sensor/thermistor_channel_1
     chown system radio /sys/class/sensors/ssp_sensor/bcm_minidump
-	chown system radio /sys/class/sensors/ssp_sensor/reset_info
+    chown system radio /sys/class/sensors/ssp_sensor/reset_info
     chown root system /sys/class/sec/sensorhub/mcu_power
 
 # Sensorhub IIO
@@ -206,97 +202,17 @@ on init
     chown system radio /sys/class/sensors/thermistor_sensor/threshold_sub
 
 # Permissions for LCD HMT
-	chown system system /sys/class/lcd/panel/hmt_on
-	chown system system /sys/class/lcd/panel/hmt_bright
-	chown system system /sys/class/mdnie/mdnie/hmt_color_temperature
+    chown system system /sys/class/lcd/panel/hmt_on
+    chown system system /sys/class/lcd/panel/hmt_bright
+    chown system system /sys/class/mdnie/mdnie/hmt_color_temperature
 
 # DATA_INJECTION
     chown system radio /sys/class/sensors/ssp_sensor/data_injection_enable
 
-    #Permission for EHMP
-    chown system system /sys/kernel/ehmp/up_threshold
-    chown system system /sys/kernel/ehmp/down_threshold
-    chown system system /sys/kernel/ehmp/min_residency
-    chown system system /sys/kernel/ehmp/bot_overutil
-    chown system system /sys/kernel/ehmp/top_overutil
-    chmod 0664 /sys/kernel/ehmp/up_threshold
-    chmod 0664 /sys/kernel/ehmp/down_threshold
-    chmod 0664 /sys/kernel/ehmp/min_residency
-    chmod 0664 /sys/kernel/ehmp/bot_overutil
-    chmod 0664 /sys/kernel/ehmp/top_overutil
-
-    #Permission for SCHEDUTIL
-    chown system system /sys/devices/system/cpu/cpufreq/policy0/schedutil/freqvar_boost
-    chown system system /sys/devices/system/cpu/cpufreq/policy0/schedutil/freqvar_up_rate_limit
-    chown system system /sys/devices/system/cpu/cpufreq/policy0/schedutil/freqvar_down_rate_limit
-    chown system system /sys/devices/system/cpu/cpufreq/policy0/schedutil/freqvar_upscale_ratio
-    chown system system /sys/devices/system/cpu/cpufreq/policy4/schedutil/freqvar_boost
-    chown system system /sys/devices/system/cpu/cpufreq/policy4/schedutil/freqvar_up_rate_limit
-    chown system system /sys/devices/system/cpu/cpufreq/policy4/schedutil/freqvar_down_rate_limit
-    chown system system /sys/devices/system/cpu/cpufreq/policy4/schedutil/freqvar_upscale_ratio
-    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/schedutil/freqvar_boost
-    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/schedutil/freqvar_up_rate_limit
-    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/schedutil/freqvar_down_rate_limit
-    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/schedutil/freqvar_upscale_ratio
-    chmod 0664 /sys/devices/system/cpu/cpufreq/policy4/schedutil/freqvar_boost
-    chmod 0664 /sys/devices/system/cpu/cpufreq/policy4/schedutil/freqvar_up_rate_limit
-    chmod 0664 /sys/devices/system/cpu/cpufreq/policy4/schedutil/freqvar_down_rate_limit
-    chmod 0664 /sys/devices/system/cpu/cpufreq/policy4/schedutil/freqvar_upscale_ratio
-
-    #Permission for ERT
-    chown system system /sys/kernel/ert/boost_frt_threshold
-    chown system system /sys/kernel/ert/rt_ratio_for_freq
-    chown system system /sys/kernel/ert/switch_fair_load_ratio
-    chown system system /sys/kernel/ert/switch_rt_load_ratio
-    chmod 0664 /sys/kernel/ert/boost_frt_threshold
-    chmod 0664 /sys/kernel/ert/rt_ratio_for_freq
-    chmod 0664 /sys/kernel/ert/switch_fair_load_ratio
-    chmod 0664 /sys/kernel/ert/switch_rt_load_ratio
-    write /sys/kernel/ert/rt_ratio_for_freq 0
-
-	# Group Balancer
-    chown system system /dev/stune/top-app/schedtune.gb_interval_us
-    chown system system /dev/stune/top-app/schedtune.gb_window_ms
-    chown system system /dev/stune/top-app/schedtune.gb_threshold
-    chown system system /dev/stune/top-app/schedtune.gb_imbalance_ratio
-    chown system system /dev/stune/top-app/schedtune.gb_duration
-    chown system system /dev/stune/top-app/schedtune.gb_balance_ratio
-    chown system system /dev/stune/foreground/schedtune.gb_interval_us
-    chown system system /dev/stune/foreground/schedtune.gb_window_ms
-    chown system system /dev/stune/foreground/schedtune.gb_threshold
-    chown system system /dev/stune/foreground/schedtune.gb_imbalance_ratio
-    chown system system /dev/stune/foreground/schedtune.gb_duration
-    chown system system /dev/stune/foreground/schedtune.gb_balance_ratio
-    chown system system /dev/stune/background/schedtune.gb_interval_us
-    chown system system /dev/stune/background/schedtune.gb_window_ms
-    chown system system /dev/stune/background/schedtune.gb_threshold
-    chown system system /dev/stune/background/schedtune.gb_imbalance_ratio
-    chown system system /dev/stune/background/schedtune.gb_duration
-    chown system system /dev/stune/background/schedtune.gb_balance_ratio
-    chmod 664 /dev/stune/top-app/schedtune.gb_interval_us
-    chmod 664 /dev/stune/top-app/schedtune.gb_window_ms
-    chmod 664 /dev/stune/top-app/schedtune.gb_threshold
-    chmod 664 /dev/stune/top-app/schedtune.gb_imbalance_ratio
-    chmod 664 /dev/stune/top-app/schedtune.gb_duration
-    chmod 664 /dev/stune/top-app/schedtune.gb_balance_ratio
-    chmod 664 /dev/stune/foreground/schedtune.gb_interval_us
-    chmod 664 /dev/stune/foreground/schedtune.gb_window_ms
-    chmod 664 /dev/stune/foreground/schedtune.gb_threshold
-    chmod 664 /dev/stune/foreground/schedtune.gb_imbalance_ratio
-    chmod 664 /dev/stune/foreground/schedtune.gb_duration
-    chmod 664 /dev/stune/foreground/schedtune.gb_balance_ratio
-    chmod 664 /dev/stune/background/schedtune.gb_interval_us
-    chmod 664 /dev/stune/background/schedtune.gb_window_ms
-    chmod 664 /dev/stune/background/schedtune.gb_threshold
-    chmod 664 /dev/stune/background/schedtune.gb_imbalance_ratio
-    chmod 664 /dev/stune/background/schedtune.gb_duration
-    chmod 664 /dev/stune/background/schedtune.gb_balance_ratio
-    write /dev/stune/top-app/schedtune.gb_interval_us 4000
-    write /dev/stune/top-app/schedtune.gb_window_ms 20
-    write /dev/stune/top-app/schedtune.gb_threshold 220
-    write /dev/stune/top-app/schedtune.gb_imbalance_ratio 75
-    write /dev/stune/top-app/schedtune.gb_duration 25
-    write /dev/stune/top-app/schedtune.gb_balance_ratio 55
+on late-fs
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/nr_requests 256
 
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
@@ -755,51 +671,7 @@ on boot
     chmod 0770 /efs/bluetooth
     chmod 0640 /efs/bluetooth/bt_addr
 
-# BarTender
-    mkdir /dev/cpuctl/bg_cached
-    chown system system /dev/cpuctl/bg_cached/tasks
-    chown system system /dev/cpuctl/bg_cached/cpu.cfs_period_us
-    chown system system /dev/cpuctl/bg_cached/cpu.cfs_quota_us
-    chmod 0666 /dev/cpuctl/bg_cached/tasks
-    chmod 0664 /dev/cpuctl/bg_cached/cpu.cfs_period_us
-    chmod 0664 /dev/cpuctl/bg_cached/cpu.cfs_quota_us
-    write /dev/cpuctl/bg_cached/cpu.rt_runtime_us 950000
-    write /dev/cpuctl/bg_cached/cpu.rt_period_us 1000000
-    write /dev/cpuctl/bg_cached/cpu.cfs_period_us 20000
-    write /dev/cpuctl/bg_cached/cpu.cfs_quota_us 10000
-
-    mkdir /dev/cpuctl/bg_abnormal
-    chown system system /dev/cpuctl/bg_abnormal/tasks
-    chown system system /dev/cpuctl/bg_abnormal/cpu.cfs_period_us
-    chown system system /dev/cpuctl/bg_abnormal/cpu.cfs_quota_us
-    chmod 0666 /dev/cpuctl/bg_abnormal/tasks
-    chmod 0664 /dev/cpuctl/bg_abnormal/cpu.cfs_period_us
-    chmod 0664 /dev/cpuctl/bg_abnormal/cpu.cfs_quota_us
-    write /dev/cpuctl/bg_abnormal/cpu.rt_runtime_us 950000
-    write /dev/cpuctl/bg_abnormal/cpu.rt_period_us 1000000
-    write /dev/cpuctl/bg_abnormal/cpu.cfs_period_us 20000
-    write /dev/cpuctl/bg_abnormal/cpu.cfs_quota_us 10000
-
-    mkdir /dev/cpuset/cached
-    write /dev/cpuset/cached/cpus 0-3
-    copy /dev/cpuset/mems /dev/cpuset/cached/mems
-    mkdir /dev/cpuset/abnormal
-    write /dev/cpuset/abnormal/cpus 0-3
-    copy /dev/cpuset/mems /dev/cpuset/abnormal/mems
-
-    # change permissions for BarTender's cpusets we'll touch at runtime
-    chown system system /dev/cpuset/cached
-    chown system system /dev/cpuset/abnormal
-    chown system system /dev/cpuset/cached/tasks
-    chown system system /dev/cpuset/abnormal/tasks
-    chown system system /dev/cpuset/cached/cpus
-    chown system system /dev/cpuset/abnormal/cpus
-    chmod 0664 /dev/cpuset/cached/tasks
-    chmod 0664 /dev/cpuset/abnormal/tasks
-    chmod 0664 /dev/cpuset/cached/cpus
-    chmod 0664 /dev/cpuset/abnormal/cpus
-
-    # For EAS scheduler
+# For EAS scheduler
     mkdir /dev/stune/bg_abnormal
     chown system system /dev/stune/bg_abnormal
     chown system system /dev/stune/bg_abnormal/tasks
@@ -856,8 +728,6 @@ on fs
 
     mount none /mnt/vendor/efs /efs bind
     mount none /mnt/vendor/cpefs /cpefs bind
-
-    setprop ro.crypto.fuse_sdcard true
 
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/cpefs
@@ -1022,47 +892,10 @@ on fs
 #load ecd firmware
     write /proc/ecd/load_firmware 1
 
-# ARGOSD network_throughput
-    chown system system /dev/network_throughput
-
-# ARGOSD
-service argos-daemon /vendor/bin/argosd
-    class main
-    user system
-    group system radio
-
-service fuse_sdcard /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard /storage/sdcard
-    class late_start
-    disabled
-service fuse_usb1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb1 /storage/usb1
-    class late_start
-    disabled
-service fuse_usb2 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb2 /storage/usb2
-    class late_start
-    disabled
-
 service abox /vendor/bin/main_abox 17c50000.abox /data/vendor/log/abox
     class late_start
     user audioserver
     group system
-
-# ICD
-service prepare_param /system/bin/prepare_param.sh /dev/block/platform/11120000.ufs/by-name/PARAM
-    class core
-    user root
-    group root
-    seclabel u:r:prepare_param:s0
-    oneshot
-
-# Set watchdog timer to 40 seconds and pet it every 10 seconds to get a 30 second margin
-service watchdogd  /system/bin/watchdogd 10 30
-    class core
-    seclabel u:r:watchdogd:s0
-
-# on userdebug and eng builds, enable kgdb on the serial console
-on property:ro.debuggable=1
-    write /sys/module/kgdboc/parameters/kgdboc ttyFIQ1
-    write /sys/module/fiq_debugger/parameters/kgdb_enable 1
 
 on property:ro.bootmode=charger
     wait /dev/block/platform/11120000.ufs/by-name/EFS
@@ -1076,45 +909,11 @@ on property:ro.bootmode=charger
     mkdir /efs/lpm 0775 system system
     class_start sec-charger
 
-# umount service
-service umount_service /system/bin/umount -D /preload
-    disabled
-    seclabel u:r:umount_service:s0
-    oneshot
-
-# sem_daemon
-service sem_daemon /system/bin/sem_daemon
-    class core
-    user system
-    group system nfc
-    disabled
-
 on property:sys.boot_completed=1
-    setprop security.semdaemonfinish 0
-    start sem_daemon
 
-on property:security.semdaemonfinish=1
-    stop sem_daemon
-
-# Support Preload install apks
-on property:persist.sys.storage_preload=1
-    mount ext4 /dev/block/platform/11120000.ufs/by-name/HIDDEN /preload nosuid nodev ro barrier=1
-    setprop storage.preload.complete 1
-
-on property:persist.sys.storage_preload=0
-    start umount_service
-
-# irisd
-    service irisd /system/bin/irisd
-    class late_start
-    user system
-    group system
-
-# faced
-    service faced /system/bin/faced
-    class late_start
-    user system
-    group system
+    write /sys/block/sda/queue/iostats 1
+    write /sys/block/sda/queue/read_ahead_kb 256
+    write /sys/block/sda/queue/nr_requests 128
 
 # SSWAP
 service swapon /sbin/sswap -s -f 2048
