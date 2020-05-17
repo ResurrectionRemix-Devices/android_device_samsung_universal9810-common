@@ -62,14 +62,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.samsungexynos9810.rc
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service.samsung-exynos
-
-# LPM
-PRODUCT_PACKAGES += \
-    libsuspend
-
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
@@ -84,6 +76,10 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.9810
+
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    lineage.livedisplay@2.0-service.samsung-exynos
 
 # SamsungDoze
 PRODUCT_PACKAGES += \
