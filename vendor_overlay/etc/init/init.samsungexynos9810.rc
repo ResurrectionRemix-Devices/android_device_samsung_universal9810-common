@@ -720,6 +720,10 @@ on boot
     chown root system /efs/FactoryApp/gyro_cal_data
     chown root system /efs/FactoryApp/mag_cal_param
 
+# Vibrator
+    chown system system /sys/class/timed_output/vibrator/enable
+    chown system system /sys/class/timed_output/vibrator/intensity
+
 on fs
     mount_all /vendor/etc/fstab.${ro.hardware}
 
