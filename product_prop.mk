@@ -33,4 +33,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone=Xylophone_Dubstep.ogg \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Hassium.ogg \
-    ro.config.vc_call_vol_steps=7
+    ro.config.vc_call_vol_steps=10 \
+    ro.config.media_vol_steps=20
