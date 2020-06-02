@@ -246,14 +246,41 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>9</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
         <item>30</item>
+        <item>50</item>
         <item>100</item>
-        <item>325</item>
-        <item>1250</item>
-        <item>3500</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>2999</item>
+        <item>3000</item>
+        <item>3999</item>
+        <item>4000</item>
+        <item>4999</item>
+        <item>5000</item>
+        <item>9999</item>
         <item>10000</item>
+        <item>19999</item>
         <item>20000</item>
+        <item>29999</item>
+        <item>30000</item>
+        <item>39999</item>
+        <item>40000</item>
+        <item>49999</item>
+        <item>50000</item>
+        <item>59999</item>
+        <item>60000</item>
+        <item>79999</item>
+        <item>80000</item>
+        <item>99999</item>
+        <item>100000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -261,15 +288,42 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <!--     9 --> <item>18</item>
-        <!--    30 --> <item>30</item>
-        <!--   100 --> <item>59</item>
-        <!--   325 --> <item>74</item>
-        <!--  1250 --> <item>92</item>
-        <!--  3500 --> <item>118</item>
-        <!-- 10000 --> <item>155</item>
-        <!-- 20000 --> <item>222</item>
-                       <item>255</item>
+        <item>22</item>
+        <item>25</item>
+        <item>28</item>
+        <item>33</item>
+        <item>35</item>
+        <item>37</item>
+        <item>49</item>
+        <item>64</item>
+        <item>64</item>
+        <item>65</item>
+        <item>67</item>
+        <item>72</item>
+        <item>98</item>
+        <item>145</item>
+        <item>145</item>
+        <item>163</item>
+        <item>163</item>
+        <item>172</item>
+        <item>172</item>
+        <item>181</item>
+        <item>181</item>
+        <item>191</item>
+        <item>191</item>
+        <item>200</item>
+        <item>200</item>
+        <item>209</item>
+        <item>209</item>
+        <item>218</item>
+        <item>218</item>
+        <item>227</item>
+        <item>227</item>
+        <item>236</item>
+        <item>236</item>
+        <item>245</item>
+        <item>245</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
