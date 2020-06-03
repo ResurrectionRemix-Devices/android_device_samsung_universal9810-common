@@ -79,6 +79,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lineage.livedisplay@2.0-service.samsung-exynos
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.3-service.9810
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.1-service.9810
