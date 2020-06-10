@@ -101,9 +101,7 @@ PRODUCT_PACKAGES += \
 
 # Preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
     Settings \
-    TrebuchetQuickStep \
     Snap
 
 # Soong
