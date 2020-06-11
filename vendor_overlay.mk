@@ -33,11 +33,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/icd_over_five_vendor.rc \
     $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/pa_daemon_kinibi.rc \
     $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/secure_storage_daemon_kinibi.rc \
-    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.tlc.atn@1.0-service.rc \
-    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.tlc.iccc@1.0-service.rc \
-    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.tlc.tima@1.0-service.rc \
-    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.tlc.ucm@1.0-service.rc \
     $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service.rc \
     $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vk_kinibi.rc \
+    $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vaultkeeper_common.rc \
     $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/lib/liboemcrypto.so
 
