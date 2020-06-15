@@ -698,6 +698,16 @@ on boot
     write /dev/cpuset/system-background/cpus 0-2
     write /dev/cpuset/restricted/cpus 0-2
 
+# GPU
+    chown system system /sys/kernel/gpu/gpu_freq_table
+    chown system system /sys/kernel/gpu/gpu_governor
+    chown system system /sys/kernel/gpu/gpu_max_clock
+    chown system system /sys/kernel/gpu/gpu_min_clock
+    chmod 0444 /sys/kernel/gpu/gpu_freq_table
+    chmod 0644 /sys/kernel/gpu/gpu_governor
+    chmod 0644 /sys/kernel/gpu/gpu_max_clock
+    chmod 0644 /sys/kernel/gpu/gpu_min_clock
+
 # FactoryApp(SensorHub)
     chown system system /efs/FactoryApp/version
     chown system system /efs/FactoryApp/predefine0
@@ -727,6 +737,56 @@ on boot
     chown system system /sys/class/timed_output/vibrator/haptic_engine
     chown system system /sys/class/timed_output/vibrator/force_touch_intensity
     write /sys/class/timed_output/vibrator/force_touch_intensity 10000
+
+# Permissions for Touchscreen
+    chown system radio /sys/class/sec/tsp/cmd
+    chown system system /sys/class/sec/tsp/input/enabled
+    chmod 0660 /sys/class/sec/tsp/input/enabled
+    chown root system /proc/tsp_msg
+    chmod 0440 /proc/tsp_msg
+    chown system radio /sys/class/sec/tsp/pressure_enable
+    chown system system /sys/class/sec/tsp/multi_count
+    chown system system /sys/class/sec/tsp/wet_mode
+    chown system system /sys/class/sec/tsp/noise_mode
+    chown system system /sys/class/sec/tsp/comm_err_count
+    chown system system /sys/class/sec/tsp/checksum
+    chown system system /sys/class/sec/tsp/holding_time
+    chown system system /sys/class/sec/tsp/all_touch_count
+    chown system system /sys/class/sec/tsp/z_value
+    chown system system /sys/class/sec/tsp/sensitivity_mode
+    chown system system /sys/class/sec/tsp/prox_power_off
+    chown system system /sys/class/sec/tsp/irq_recovery_count
+    chown system system /sys/class/sec/tsp/ic_reset_count
+    chown system system /sys/class/sec/tsp/mode_change_failed_count
+    chown system system /sys/class/sec/sec_key/key_pressed_count
+    chown system system /dev/tspio
+    chown system system /sys/class/sec/tsp/ear_detect_enable
+    chown system system /sys/class/sec/tsp/ta_mode
+    chown system system /sys/class/sec/tsp/virtual_prox
+
+# Permissions for Wacom
+    chown system radio /sys/class/sec/sec_epen/cmd
+    chown system system /sys/class/sec/sec_epen/input/enabled
+    chmod 0660 /sys/class/sec/sec_epen/input/enabled
+    chown system radio /sys/class/sec/sec_epen/epen_firm_update
+    chown system radio /sys/class/sec/sec_epen/epen_reset
+    chown system radio /sys/class/sec/sec_epen/epen_reset_result
+    chown system radio /sys/class/sec/sec_epen/epen_checksum
+    chown system radio /sys/class/sec/sec_epen/epen_checksum_result
+    chown system radio /sys/class/sec/sec_epen/epen_saving_mode
+    chown system radio /sys/class/sec/sec_epen/epen_wcharging_mode
+    chown system radio /sys/class/sec/sec_epen/epen_ble_charging_mode
+    chown system radio /sys/class/sec/sec_epen/keyboard_mode
+    chown system radio /sys/class/sec/sec_epen/epen_disable_mode
+    chown system radio /sys/class/sec/sec_epen/aod_enable
+    chown system radio /sys/class/sec/sec_epen/aod_lcd_onoff_status
+    chown system radio /sys/class/sec/sec_epen/screen_off_memo_enable
+    chown system radio /sys/class/sec/sec_epen/dex_enable
+    chown system radio /sys/class/sec/sec_epen/epen_fac_garage_mode
+    chown system radio /sys/class/sec/sec_epen/epen_fac_select_firmware
+    chown system system /sys/class/sec/sec_epen/abnormal_reset_count
+    chown system system /sys/class/sec/sec_epen/i2c_fail_count
+    chown system system /sys/class/sec/sec_epen/pen_out_count
 
 on fs
     mount_all /vendor/etc/fstab.${ro.hardware}
