@@ -7,7 +7,7 @@ LOCAL_MODULE_TAGS  := optional
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin
 LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_MODULE_STEM := vendor.samsung.hardware.vibrator@2.0-service
+LOCAL_MODULE_STEM := vendor.samsung.hardware.vibrator@2.1-service
 
 LOCAL_SRC_FILES := \
     service.cpp \
@@ -43,7 +43,7 @@ LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init
-LOCAL_MODULE_STEM := vendor.samsung.hardware.vibrator@2.0-service.rc
+LOCAL_MODULE_STEM := vendor.samsung.hardware.vibrator@2.1-service.rc
 
 LOCAL_SRC_FILES := android.hardware.vibrator@1.3-service.9810.rc
 
