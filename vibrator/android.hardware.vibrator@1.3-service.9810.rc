@@ -1,4 +1,0 @@
-service sec-vibrator-2-0 /vendor/bin/hw/vendor.samsung.hardware.vibrator@2.1-service
-    class hal
-    user system
-    group system
