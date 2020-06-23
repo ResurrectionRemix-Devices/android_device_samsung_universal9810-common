@@ -1,2 +1,1 @@
-allow charger proc_last_kmsg:file { getattr open read };
 allow charger device:dir { open read };
