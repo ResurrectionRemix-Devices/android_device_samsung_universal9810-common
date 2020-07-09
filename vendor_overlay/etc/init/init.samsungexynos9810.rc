@@ -998,7 +998,3 @@ service swapon /sbin/sswap -s -f 2048
     group root
     seclabel u:r:sswap:s0
     oneshot
-
-service sec_wsm_service /system/bin/true
-    oneshot
-    disabled
