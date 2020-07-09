@@ -739,6 +739,10 @@ on boot
     chown system system /sys/class/timed_output/vibrator/force_touch_intensity
     write /sys/class/timed_output/vibrator/force_touch_intensity 10000
 
+# Smart Charging
+    chown system system /sys/class/power_supply/battery/batt_slate_mode
+    chmod 0666 /sys/class/power_supply/battery/batt_slate_mode
+
 # Permissions for Touchscreen
     chown system radio /sys/class/sec/tsp/cmd
     chown system system /sys/class/sec/tsp/input/enabled
