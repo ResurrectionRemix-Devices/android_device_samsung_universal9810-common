@@ -22,7 +22,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Surfaceflinger
 PRODUCT_PRODUCT_PROPERTIES += \
-    debug.sf.latch_unsignaled=1
+    debug.sf.latch_unsignaled=1 \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # Telephony
 PRODUCT_PRODUCT_PROPERTIES += \
