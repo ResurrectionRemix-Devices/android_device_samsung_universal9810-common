@@ -101,7 +101,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Snap
 
 # Soong
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+PRODUCT_SOONG_NAMESPACES += \
+	device/samsung/universal9810-common
 
 # vendor_overlay
 -include $(LOCAL_PATH)/vendor_overlay.mk
