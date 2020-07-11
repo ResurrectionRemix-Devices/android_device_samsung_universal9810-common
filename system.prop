@@ -1,0 +1,12 @@
+# Samsung stuff
+ro.product_ship=true
+
+# Disable ConsumerIR
+config.disable_consumerir=true
+
+# Enable CSC for vendor image
+ro.vendor.cscsupported=1
+
+# Cmc properties
+ro.cmc.device_type=pd
+ro.cmc.version=2.0
