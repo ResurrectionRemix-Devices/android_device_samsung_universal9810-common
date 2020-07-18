@@ -1,0 +1,2 @@
+allow system_app sysfs_sec_switch:dir search;
+allow system_app sysfs_sec_switch:file rw_file_perms;
