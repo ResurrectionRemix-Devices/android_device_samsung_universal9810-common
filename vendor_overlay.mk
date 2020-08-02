@@ -33,6 +33,10 @@ PRODUCT_PACKAGES += \
     media_profiles_V1_0.xml \
     libnfc-sec-vendor.conf
 
+# usb_audio_policy_configuration.xml
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/etc/usb_audio_policy_configuration.xml
+
 # null
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vendor_overlay/null:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/etc/init/icd_over_five_vendor.rc \
