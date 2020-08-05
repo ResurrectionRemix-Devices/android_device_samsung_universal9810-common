@@ -11,3 +11,5 @@ allow init proc_sched:file getattr;
 allow init proc_sysrq:file getattr;
 
 allow init runtime_event_log_tags_file:file getattr;
+
+allow init sysfs_battery_supply:file { setattr };
