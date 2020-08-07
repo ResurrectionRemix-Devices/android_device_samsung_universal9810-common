@@ -5,3 +5,6 @@ type sysfs_health, sysfs_type, fs_type;
 type sysfs_sec_key, sysfs_type, fs_type;
 #socket
 type sysfs_battery_supply, sysfs_type, fs_type;
+#touch
+type sysfs_touchscreen, sysfs_type, fs_type;
+

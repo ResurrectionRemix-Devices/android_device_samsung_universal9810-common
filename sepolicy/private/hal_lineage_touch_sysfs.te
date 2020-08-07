@@ -1,0 +1,8 @@
+type hal_lineage_touch_sysfs, domain, coredomain;
+hal_server_domain(hal_lineage_touch_sysfs, hal_lineage_touch)
+
+type hal_lineage_touch_sysfs_exec, system_file_type, exec_type, file_type;
+init_daemon_domain(hal_lineage_touch_sysfs)
+
+allow hal_lineage_touch_sysfs sysfs_touchscreen:file rw_file_perms;
+
