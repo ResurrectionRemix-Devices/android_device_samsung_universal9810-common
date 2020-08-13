@@ -14,6 +14,26 @@ product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 -priv-app/HotwordEnrollmentXGoogleExCORTEXM4/HotwordEnrollmentXGoogleExCORTEXM4.apk;PRESIGNED
 etc/permissions/privapp-permissions-hotword.xml
 
+# LPM
+bin/lpm
+lib64/libmaet.so
+lib64/libsxqk_skia.so
+media/battery_error.spi
+media/battery_low.spi
+media/battery_temperature_error.spi
+media/battery_temperature_limit.spi
+media/battery_water_usb.spi
+media/charging_New_Fast.spi
+media/charging_New_Normal.spi
+media/dock_error_usb.spi
+media/incomplete_connect.spi
+media/lcd_density.txt
+media/percentage.spi
+media/safety_timer_usb.spi
+media/slow_charging_usb.spi
+media/temperature_limit_usb.spi
+media/water_protection_usb.spi
+
 # S-Pen
 usr/idc/sec_e-pen.idc
 

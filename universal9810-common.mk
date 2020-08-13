@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.samsungexynos9810.rc
 
+# LPM
+PRODUCT_PACKAGES += \
+    libsuspend
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0

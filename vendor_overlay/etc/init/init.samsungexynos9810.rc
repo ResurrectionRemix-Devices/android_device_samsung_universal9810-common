@@ -627,6 +627,10 @@ on boot
     chown system system /sys/class/sec/disp_pmic/enable_fd
     chown system system /sys/class/sec/disp_pmic/power_meter/adc_mode
 
+    # LPM Info
+    chown system system /efs/lpm/lpm_info.log
+    chmod 0660 /efs/lpm/lpm_info.log
+
 # Permission for USB SELECT
     chown system system /sys/class/android_usb/android0/enable
     chmod 0660 /sys/class/android_usb/android0/enable
@@ -981,8 +985,8 @@ on property:ro.bootmode=charger
     mkdir /efs/lpm 0775 system system
     class_start sec-charger
 
-# Charger
-service lpm /system/bin/charger
+# LPM
+service lpm /system/bin/lpm
     class sec-charger
     user root
     group system radio input
