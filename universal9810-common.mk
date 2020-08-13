@@ -83,6 +83,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lineage.touch@1.0-service.9810
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.3-service.9810
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.1-service.9810
