@@ -353,7 +353,7 @@
 
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware for individual layers. -->
-    <bool name="config_setColorTransformAcceleratedPerLayer">true</bool>
+    <bool name="config_setColorTransformAcceleratedPerLayer">false</bool>
 
     <!-- Doze (Ambient display) -->
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
