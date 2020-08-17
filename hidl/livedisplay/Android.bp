@@ -19,6 +19,7 @@ cc_binary {
     relative_install_path: "hw",
     init_rc: ["lineage.livedisplay@2.0-service.9810.rc"],
     srcs: [
+        "AdaptiveBacklight.cpp",
         "DisplayColorCalibrationExynos.cpp",
         "DisplayModes.cpp",
         "ReadingEnhancement.cpp",
