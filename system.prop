@@ -13,3 +13,7 @@ ro.cmc.version=2.0
 
 #Display
 debug.cpurend.vsync=false
+
+ #ADB props
+ro.secure=1 
+ro.debuggable=0
