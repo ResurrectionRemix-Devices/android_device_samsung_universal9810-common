@@ -114,9 +114,6 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
-# Dex-preoptimization
-DONT_DEXPREOPT_PREBUILTS := true
-
 # SELinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
