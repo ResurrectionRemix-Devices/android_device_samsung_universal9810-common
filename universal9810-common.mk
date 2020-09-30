@@ -116,6 +116,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     Snap
+    
+# RR Wallpapers
+BUILD_RR_WALLPAPERS:= true
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
