@@ -3,16 +3,12 @@ lib/hw/audio.playback_record.default.so
 lib/hw/audio.tms.default.so
 lib/libsecaudiocoreutils.so
 
-# Tones
-product/media/audio/ringtones/Xylophone_Dubstep.ogg
-
 # Bluetooth - APT-X
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Hotword Enrollment
 -priv-app/HotwordEnrollmentOKGoogleExCORTEXM4/HotwordEnrollmentOKGoogleExCORTEXM4.apk;PRESIGNED
 -priv-app/HotwordEnrollmentXGoogleExCORTEXM4/HotwordEnrollmentXGoogleExCORTEXM4.apk;PRESIGNED
-etc/permissions/privapp-permissions-hotword.xml
 
 # LPM
 bin/lpm
@@ -34,13 +30,9 @@ media/slow_charging_usb.spi
 media/temperature_limit_usb.spi
 media/water_protection_usb.spi
 
-# S-Pen
-usr/idc/sec_e-pen.idc
-
 # NFC
-etc/libnfc-nci.conf
 etc/nfc_key
 etc/nfcee_access.xml
 
-# Zswap
+# SSWAP
 -sbin/sswap;rootfs

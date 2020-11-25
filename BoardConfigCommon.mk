@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -116,9 +116,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
 # SELinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
-
-# Realtime Charging Info
-BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Inherit from the proprietary version
 -include vendor/samsung/universal9810-common/BoardConfigVendor.mk
